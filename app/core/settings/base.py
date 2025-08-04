@@ -4,7 +4,7 @@ Django settings for Video and Audio Compressor project.
 from pathlib import Path
 import dj_database_url
 
-from decouple import config
+from decouple import config, Csv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -16,6 +16,7 @@ APPS_DIR = ROOT_DIR / "core"
 SECRET_KEY = config("SECRET_KEY")
 
 DEBUG = config("DEBUG", cast=bool)
+ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="*", cast=Csv())
 
 USE_X_FORWARDED_HOST = True
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
@@ -27,6 +28,7 @@ INSTALLED_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
+ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="*", cast=Csv())
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # Third-party Apps

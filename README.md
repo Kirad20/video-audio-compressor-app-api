@@ -38,3 +38,27 @@ http://localhost:8000/api/v1/doc
 ## Flower
 
 ![Frontend](flower.png)
+
+## Despliegue en CapRover
+
+Este proyecto está listo para desplegarse en CapRover. Sigue estos pasos:
+
+1. Asegúrate de que el archivo `captain-definition` esté en la raíz del proyecto.
+2. En la sección "App Configs > Environment Variables & Secrets" de CapRover, agrega las siguientes variables de entorno:
+	- `SECRET_KEY`
+	- `DATABASE_URL`
+	- `RABBITMQ_URL`
+	- `FLOWER_BASIC_AUTH`
+	- `ALLOWED_HOSTS` (por ejemplo: `*`)
+3. En tu máquina local, instala CapRover CLI:
+	```sh
+	npm install -g caprover
+	```
+4. Conéctate a tu servidor CapRover:
+	```sh
+	caprover login
+	```
+5. Despliega la aplicación:
+	```sh
+	caprover deploy
+	```

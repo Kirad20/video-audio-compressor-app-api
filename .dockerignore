@@ -1,0 +1,64 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.cache
+pytest_cache/
+.coverage.*
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+
+# pyenv
+.python-version
+
+# virtualenv
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+# macOS
+.DS_Store
+
+# Docker
+docker/dev/
+docker/prod/
+docker-compose.override.yml
+.env
+
+# VS Code
+.vscode/
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+media
