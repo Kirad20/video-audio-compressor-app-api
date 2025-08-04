@@ -22,8 +22,8 @@ RUN pip install --upgrade pip \
 COPY ./docker/prod/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-# Copy project files
-COPY . /app
+# Copy application code (manage.py, core, compressor, etc.)
+COPY app /app
 
 # Collect static files
 RUN python manage.py collectstatic --no-input
