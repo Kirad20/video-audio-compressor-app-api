@@ -1,6 +1,7 @@
 {
   "schemaVersion": 2,
   "dockerfilePath": "docker/prod/Dockerfile",
+  "buildContext": ".",
   "containerHttpPort": 8000,
   "serviceName": "compressor-api"
 }
